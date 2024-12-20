@@ -28,6 +28,10 @@ A machine learning solution for predicting customer dissatisfaction using decisi
 ## 🌟 Overview
 Predicting customer dissatisfaction is critical for proactive customer retention. This project addresses noisy, imbalanced data using techniques like SMOTE, hyperparameter tuning, and ensemble learning.
 
+This project is a solution to the [Santander Customer Satisfaction Kaggle Competition](https://www.kaggle.com/c/santander-customer-satisfaction).
+The primary focus was on creating a high-performing machine learning model locally, All data preprocessing, modeling, and evaluation were conducted locally using Google Colab.The model was developed and fine-tuned locally, and the results reflect its performance on unseen test data.</br>
+The final predictions (`results/predictions.csv`) were submitted to the Kaggle competition for evaluation, achieving a score of <b> 0.80687 </b>.  
+
 ### Key Features:
 - Preprocessing with SMOTE to balance the dataset.
 - Hyperparameter tuning of decision trees.
