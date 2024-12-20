@@ -12,13 +12,16 @@ A machine learning solution for predicting customer dissatisfaction using decisi
 ---
 
 ## 📚 Table of Contents
-1. [Overview](#overview)
-2. [Setup](#setup)
-3. [Data](#data)
-4. [Project Structure](#project-structure)
-5. [Code Overview](#code-overview)
-6. [Results](#results)
-7. [Acknowledgements](#acknowledgements)
+
+1. [Overview](#-overview)
+2. [Setup](#-setup)
+3. [Data](#-data)
+4. [Project Structure](#-project-structure)
+5. [Code Overview](#-code-overview)
+6. [Results](#-results)
+7. [Limitations](#-limitations)
+8. [Future Work](#-future-work)
+9. [Acknowledgements](#-acknowledgements)
 
 ---
 
