@@ -29,11 +29,12 @@ Predicting customer dissatisfaction is critical for proactive customer retention
 
 ---
 
-## ⚙ ️ Setup
+## ⚙ Setup
 ### Clone the Repository
 ```bash
 git clone https://github.com/your-username/Santander-Customer-Satisfaction.git
 cd Santander-Customer-Satisfaction
+```
 
 ---
 
@@ -60,11 +61,6 @@ Place the following files in the `data/` folder:
 This repository is organized as follows:
 
 ```text
-## 📂 Project Structure
-
-This repository is organized as follows:
-
-```text
 Santander-Customer-Satisfaction/
 ├── README.md                        # Main documentation
 ├── requirements.txt                 # List of dependencies
@@ -83,7 +79,7 @@ Santander-Customer-Satisfaction/
 ├── results/
 │   ├── predictions.csv              # Submission file
 ├── LICENSE                          # License for the project
-
+```
 ### Descriptions of Folders and Key Files
 
 - **`README.md`**: The main documentation file for the project.
@@ -123,20 +119,23 @@ The following table summarizes the performance of the key models:
 
 #### **1. Confusion Matrix**
 The confusion matrix shows the model's classification results:
+
 ![Confusion Matrix](images/confusion_matrix.png)
 
 #### **2. ROC Curve Comparison**
 This plot compares the ROC curves for different models:
+
 ![ROC Curve Comparison](images/roc_curve_comparison.png)
 
 #### **3. Precision-Recall Curve**
 This curve highlights the trade-offs between precision and recall:
+
 ![Precision-Recall Curve](images/precision_recall_curve.png)
 
 
 ---
 
-## ⚠ ️ Limitations
+## ⚠ Limitations
 
 While this project achieved its goals, there are several limitations:
 
