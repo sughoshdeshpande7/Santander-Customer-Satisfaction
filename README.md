@@ -5,6 +5,9 @@
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
 A machine learning solution for predicting customer dissatisfaction using decision trees, bagging, and SMOTE. This project tackles challenges like class imbalance, noisy features, and model evaluation.
+<p align="center">
+   <img width="575" alt="Screenshot 2024-12-19 at 11 40 19 PM" src="https://github.com/user-attachments/assets/eeb6da7f-e786-402c-a1f2-5002ad3e33dc" />
+</p>
 
 ---
 
@@ -13,8 +16,9 @@ A machine learning solution for predicting customer dissatisfaction using decisi
 2. [Setup](#setup)
 3. [Data](#data)
 4. [Project Structure](#project-structure)
-5. [Results](#results)
-6. [Acknowledgements](#acknowledgements)
+5. [Code Overview](#code-overview)
+6. [Results](#results)
+7. [Acknowledgements](#acknowledgements)
 
 ---
 
@@ -34,6 +38,11 @@ Predicting customer dissatisfaction is critical for proactive customer retention
 ```bash
 git clone https://github.com/your-username/Santander-Customer-Satisfaction.git
 cd Santander-Customer-Satisfaction
+```
+### Installing Dependencies
+To install the required Python packages, run:
+```bash
+pip install -r requirements.txt
 ```
 
 ---
@@ -62,44 +71,78 @@ This repository is organized as follows:
 
 ```text
 Santander-Customer-Satisfaction/
-├── README.md                        # Main documentation
-├── requirements.txt                 # List of dependencies
 ├── data/
 │   ├── train.csv                    # Training dataset
 │   ├── test.csv                     # Test dataset
-├── notebook/
-│   ├── Santander_Analysis_Colab.ipynb # Single Colab notebook for the entire project
 ├── images/
 │   ├── confusion_matrix.png         # Confusion Matrix visualization
 │   ├── roc_curve.png                # ROC Curve comparison
 │   ├── precision_recall_curve.png   # Precision-Recall curve
+├── notebook/
+│   ├── Santander_Analysis_Colab.ipynb # Single Colab notebook for the entire project
 ├── presentations/
 │   ├── Santander_Project_Presentation.pptx  # PowerPoint Presentation
 │   ├── Santander_Project_Recording.mp4      # Recording of the project
 ├── results/
 │   ├── predictions.csv              # Submission file
 ├── LICENSE                          # License for the project
+├── README.md                        # Main documentation
+├── requirements.txt                 # List of dependencies
 ```
 ### Descriptions of Folders and Key Files
 
-- **`README.md`**: The main documentation file for the project.
-- **`requirements.txt`**: Contains the list of Python libraries and their versions needed to replicate the environment.
 - **`data/`**: Folder containing input datasets:
   - `train.csv`: Training dataset.
   - `test.csv`: Test dataset for making predictions.
-  - **Note**: These files are not included in the repository due to size and confidentiality constraints. Please download them from [Kaggle](https://www.kaggle.com/c/santander-customer-satisfaction).
-- **`notebook/`**: Contains the single Colab notebook:
-  - `Santander_Analysis_Colab.ipynb`: A consolidated Colab notebook including all steps: EDA, model training, evaluation, and submission creation.
+  - **Note**: If These files are not included in the repository due to size and confidentiality constraints. Please download them from [Kaggle](https://www.kaggle.com/c/santander-customer-satisfaction).
 - **`images/`**: Folder for generated plots and visualizations:
   - `confusion_matrix.png`: Confusion Matrix visualization.
   - `roc_curve.png`: ROC Curve comparison between models.
   - `precision_recall_curve.png`: Precision-Recall Curve for imbalanced datasets.
+- **`notebook/`**: Contains the single Colab notebook:
+  - `Santander_Analysis_Colab.ipynb`: A consolidated Colab notebook including all steps: EDA, model training, evaluation, and submission creation.
 - **`presentations/`**: Contains the project presentation and recording:
   - `Santander_Project_Presentation.pptx`: PowerPoint file summarizing the project.
   - `Santander_Project_Recording.mp4`: Walkthrough video explaining the workflow and results.
 - **`results/`**: Folder containing final outputs:
   - `predictions.csv`: Submission-ready file with predicted probabilities for the test set.
+- **`README.md`**: The main documentation file for the project.
+- **`requirements.txt`**: Contains the list of Python libraries and their versions needed to replicate the environment.
 
+---
+
+## 📔 Code Overview
+
+The notebook `Santander_Analysis_Colab.ipynb` contains the following steps:
+
+1. **Data Loading and Exploration:**
+   - Loads the training and testing datasets (`data/train.csv` and `data/test.csv`).
+   - Performs an exploratory analysis to understand class distributions, missing values, and feature statistics.
+
+2. **Data Preprocessing:**
+   - Applies techniques like SMOTE to balance the dataset due to class imbalance.
+   - Performs feature selection and scaling to improve model performance.
+
+3. **Model Training and Tuning:**
+   - Implements and trains a Decision Tree classifier.
+   - Conducts hyperparameter tuning using Grid Search to optimize parameters like max depth and split criteria.
+
+4. **Model Evaluation:**
+   - Evaluates the models using metrics such as:
+     - **ROC-AUC**
+     - **Precision-Recall Curve**
+     - **Confusion Matrix**
+   - Compares results between models, such as Bagging Classifier vs. Decision Tree.
+
+5. **Visualizations:**
+   - Plots key visualizations to aid interpretation:
+     - Confusion Matrix
+     - ROC Curve Comparison
+     - Precision-Recall Curve
+
+6. **Results and Predictions:**
+   - Saves the predictions as `results/submissions.csv` for final submission.
+   - Highlights model performance using metrics like AUC and Precision-Recall.
 
 ---
 
@@ -125,13 +168,12 @@ The confusion matrix shows the model's classification results:
 #### **2. ROC Curve Comparison**
 This plot compares the ROC curves for different models:
 
-![ROC Curve Comparison](images/roc_curve_comparison.png)
+![ROC Curve Comparison](images/roc_curve.png)
 
 #### **3. Precision-Recall Curve**
 This curve highlights the trade-offs between precision and recall:
 
 ![Precision-Recall Curve](images/precision_recall_curve.png)
-
 
 ---
 
