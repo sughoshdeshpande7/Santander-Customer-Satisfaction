@@ -1,0 +1,19 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore temporary or intermediate files
+*.tmp
+*.log
+*.swp
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Keep all data and results, but ignore any backups or temp files in these folders
+!data/*
+!results/*
+
+# Uncomment the next line if you want to ignore all datasets (not recommended)
+# data/*.csv
+
+.DS_Store
